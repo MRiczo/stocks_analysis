@@ -2,6 +2,12 @@
   ### The purpose of this Data Analysis Project is to create a tool using VBA that can analyze a set of stocks for any given year and return the Volume of stock traded as well as the total increase or decrease in value for the given stock. Two sets of yearly data were initially given to run this macro on, 2017 and 2018, but after refactoring the code it can take any year that you may want analyzed.
 ## Results
   ### The first year analyzed was 2017. Running the VBA Macro on the data set returns the results that all stocks but one, "TERP", had positive returns in 2017. This is easily understood from a glance thanks to colored backgrounds in the Returns column. To achieve this the Macro uses a for loop to check the value in the Returns Column and then using an if-else statement check the value of the returns cell and if it is greater than 0 it will come back green. The code for 2017 ran in just over .1 second, which is faster than the code did before refactoring. The second year analyzed was 2018. Running the same macro but instead entering 2018 in the prompt box returns the second image below. This year had much worse returns as all but two stocks, “RUN" and "ENPH" posted losses in the return’s column. This Macro also ran significantly faster than the older code. This is most likely due to the refactoring of code to only loop through each part of the data once. This was achieved by creating a value, tickerIndex, and making it increase by once each time it has filtered all of one ticker. Then that value can be used in arrays that have been set up for all the output values. This allows the VBA script to be much more versatile in its application and makes it less likely to need refactoring in the future.
+  
+## 2017 and 2018 Run Analysis
+![2017](VBA_Challenge_2017.png)
+
+![2018](VBA_Challenge_2018.png)
+  
 ## Summary
 ### The biggest advantage to refactoring code is that you can apply any new concepts to your old code that you may have learned since you've last looked at it. Another advantage to refactoring even when you have no new tools to apply is that coming back to old code may give you a new way to look at the code that you hadn't considered. A disadvantage to refactoring could be that changing the code in any massive way might break things you didn't intend. Obviously if you practice good saving habits and push regularly rolling back anything you've broken is easy, but the time wasted going down a non-viable refactoring attempt could make the project or any other work more difficult due to the time sink.
 
